@@ -9428,7 +9428,7 @@ function ep() {
               // Screen
               a.jsx("div", {
                 className:
-                  "w-full h-full bg-white rounded-[28px] overflow-hidden",
+                  "w-full h-full bg-white rounded-[28px] overflow-hidden mt-4",
                 children: a.jsx("img", {
                   src: "customer-removebg-preview.png",
                   alt: "App Screen",
