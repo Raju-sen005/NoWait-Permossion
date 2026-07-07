@@ -9388,7 +9388,7 @@ function ep() {
                 "flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center",
               children: [
                 a.jsxs("a", {
-                  href: "https://play.google.com",
+                  href: "https://play.google.com/store/apps/details?id=com.nowait.owner&hl=en_IN",
                   className:
                     "flex items-center space-x-3 bg-[#0041F5] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#0035cc] transition-all transform hover:scale-105 shadow-lg",
                   children: [
@@ -9397,15 +9397,15 @@ function ep() {
                     a.jsx("span", { children: "Download for Android" }),
                   ],
                 }),
-                a.jsxs("a", {
-                    href: "https://apps.apple.com",
-                  className:
-                    "flex items-center space-x-3 bg-[#0041F5] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#0035cc] transition-all transform hover:scale-105 shadow-lg",
-                  children: [
-                    a.jsx(oc, { className: "w-6 h-6" }),
-                    a.jsx("span", { children: "Download for iOS" }),
-                  ],
-                }),
+                // a.jsxs("a", {
+                //     href: "https://apps.apple.com",
+                //   className:
+                //     "flex items-center space-x-3 bg-[#0041F5] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#0035cc] transition-all transform hover:scale-105 shadow-lg",
+                //   children: [
+                //     a.jsx(oc, { className: "w-6 h-6" }),
+                //     a.jsx("span", { children: "Download for iOS" }),
+                //   ],
+                // }),
               ],
             }),
           ],
@@ -9430,7 +9430,7 @@ function ep() {
                 className:
                   "w-full h-full bg-white rounded-[28px] overflow-hidden mt-4",
                 children: a.jsx("img", {
-                  src: "customer-removebg-preview.png",
+                  src: "./images/customer-removebg-preview.png",
                   alt: "App Screen",
                   className: "w-full h-full object-cover",
                 }),
@@ -9822,7 +9822,7 @@ function op() {
                   className:
                     "bg-white rounded-3xl shadow-xl overflow-hidden mb-6 transform hover:scale-105 transition-transform",
                   children: a.jsx("img", {
-                    src: "/download.png",
+                    src: "./images/beauty-salon.png",
                     alt: "Search Salons",
                     className: "w-full h-auto max-w-sm",
                   }),
@@ -9851,7 +9851,7 @@ function op() {
                   className:
                     "bg-white rounded-3xl shadow-xl overflow-hidden mb-6 transform hover:scale-105 transition-transform",
                   children: a.jsx("img", {
-                    src: "/download.png",
+                    src: "./images/beauty-salon.png",
                     alt: "Select Time",
                     className: "w-full h-auto max-w-sm",
                   }),
@@ -9880,7 +9880,7 @@ function op() {
                   className:
                     "bg-white rounded-3xl shadow-xl overflow-hidden mb-6 transform hover:scale-105 transition-transform",
                   children: a.jsx("img", {
-                    src: "/download.png",
+                    src: "./images/beauty-salon.png",
                     alt: "In Salon",
                     className: "w-full h-auto max-w-sm",
                   }),
@@ -9935,7 +9935,7 @@ function sp() {
               className: "space-y-6",
               children: [
                 a.jsxs("a", {
-                  href: "https://play.google.com/store/apps/details?id=com.nowait",
+                  href: "https://play.google.com/store/apps/details?id=com.nowait.owner&hl=en_IN",
                   target: "_blank",
                   rel: "noopener noreferrer",
                   className:
@@ -9957,29 +9957,29 @@ function sp() {
                     }),
                   ],
                 }),
-                a.jsxs("a", {
-                  href: "https://apps.apple.com/app/nowait/idXXXXXXXXXX",
-                  target: "_blank",
-                  rel: "noopener noreferrer",
-                  className:
-                    "w-full flex items-center justify-center space-x-4 bg-[#0041F5] text-white px-8 py-5 rounded-xl text-lg font-semibold hover:bg-[#0035cc] transition-all transform hover:scale-105 shadow-lg",
-                  children: [
-                    a.jsx(oc, { className: "w-7 h-7" }),
-                    a.jsxs("div", {
-                      className: "text-left",
-                      children: [
-                        a.jsx("div", {
-                          className: "text-xs opacity-80",
-                          children: "DOWNLOAD ON",
-                        }),
-                        a.jsx("div", {
-                          className: "text-xl font-bold",
-                          children: "App Store",
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
+                // a.jsxs("a", {
+                //   href: "https://apps.apple.com/app/nowait/idXXXXXXXXXX",
+                //   target: "_blank",
+                //   rel: "noopener noreferrer",
+                //   className:
+                //     "w-full flex items-center justify-center space-x-4 bg-[#0041F5] text-white px-8 py-5 rounded-xl text-lg font-semibold hover:bg-[#0035cc] transition-all transform hover:scale-105 shadow-lg",
+                //   children: [
+                //     a.jsx(oc, { className: "w-7 h-7" }),
+                //     a.jsxs("div", {
+                //       className: "text-left",
+                //       children: [
+                //         a.jsx("div", {
+                //           className: "text-xs opacity-80",
+                //           children: "DOWNLOAD ON",
+                //         }),
+                //         a.jsx("div", {
+                //           className: "text-xl font-bold",
+                //           children: "App Store",
+                //         }),
+                //       ],
+                //     }),
+                //   ],
+                // }),
               ],
             }),
             a.jsx("div", {
@@ -9988,13 +9988,13 @@ function sp() {
                 className: "bg-gray-50 p-8 rounded-2xl shadow-lg",
                 children: [
                   a.jsx("img", {
-                    src: "/download.png",
+                    src: "./images/nowait-logo.png",
                     alt: "NoWait Logo",
                     className: "w-full h-auto rounded-xl",
                   }),
                   a.jsx("p", {
                     className: "text-center text-gray-600 mt-4 font-medium",
-                    children: "Available on iOS & Android",
+                    children: "Available on Android",
                   }),
                 ],
               }),
@@ -10067,9 +10067,9 @@ function up() {
                           children: "Email",
                         }),
                         a.jsx("a", {
-                          href: "mailto:contact@nowait.in",
+                          href: "mailto:nowaitinsaloon@gmail.com",
                           className: "text-[#0041F5] hover:underline",
-                          children: "contact@nowait.in",
+                          children: "nowaitinsaloon@gmail.com",
                         }),
                       ],
                     }),
@@ -10092,9 +10092,9 @@ function up() {
                           children: "Phone",
                         }),
                         a.jsx("a", {
-                          href: "tel:+919876543210",
+                          href: "tel:+918529698672",
                           className: "text-[#0041F5] hover:underline",
-                          children: "+91 98765 43210",
+                          children: "+91 85296 98672",
                         }),
                       ],
                     }),
@@ -10285,7 +10285,7 @@ function ap() {
                   className: "flex items-center space-x-2 mb-4",
                   children: [
                     a.jsx("img", {
-                      src: "/nowait-logo.png",
+                      src: "./images/nowait-logo.png",
                       alt: "NoWait",
                       className: "h-10 w-10 rounded-full",
                     }),
@@ -10441,7 +10441,7 @@ function cp() {
               className: "flex items-center space-x-2",
               children: [
                 a.jsx("img", {
-                  src: "/nowait-logo.png",
+                  src: "./images/nowait-logo.png",
                   alt: "NoWait",
                   className: "h-10 w-10 rounded-full",
                 }),
