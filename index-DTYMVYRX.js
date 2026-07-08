@@ -9365,7 +9365,6 @@ function ep() {
       className:
         "max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center",
       children: [
-
         /* LEFT CONTENT */
         a.jsxs("div", {
           className: "text-center lg:text-left",
@@ -9392,7 +9391,6 @@ function ep() {
                   className:
                     "flex items-center space-x-3 bg-[#0041F5] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#0035cc] transition-all transform hover:scale-105 shadow-lg",
                   children: [
-                    
                     a.jsx(oc, { className: "w-6 h-6" }),
                     a.jsx("span", { children: "Download for Android" }),
                   ],
@@ -9418,7 +9416,6 @@ function ep() {
             className:
               "relative w-[220px] sm:w-[260px] h-[460px] sm:h-[520px] bg-black rounded-[36px] p-3 shadow-2xl",
             children: [
-
               // Notch
               a.jsx("div", {
                 className:
@@ -9941,7 +9938,11 @@ function sp() {
                   className:
                     "w-full flex items-center justify-center space-x-4 bg-[#0041F5] text-white px-8 py-5 rounded-xl text-lg font-semibold hover:bg-[#0035cc] transition-all transform hover:scale-105 shadow-lg",
                   children: [
-                    a.jsx(oc, { className: "w-7 h-7" }),
+                    a.jsx("img", {
+                      src: "./images/play.jpg",
+                      alt: "Google Play",
+                      className: "w-10 h-auto object-contain",
+                    }),
                     a.jsxs("div", {
                       className: "text-left",
                       children: [
@@ -9988,13 +9989,13 @@ function sp() {
                 className: "bg-gray-50 p-8 rounded-2xl shadow-lg",
                 children: [
                   a.jsx("img", {
-                    src: "./images/nowait-logo.png",
-                    alt: "NoWait Logo",
+                    src: "./images/qr.png",
+                    alt: "NoWait QR Code",
                     className: "w-full h-auto rounded-xl",
                   }),
                   a.jsx("p", {
                     className: "text-center text-gray-600 mt-4 font-medium",
-                    children: "Available on Android",
+                    children: "Scan the QR code to download the app",
                   }),
                 ],
               }),
@@ -10405,7 +10406,6 @@ function ap() {
                         children: "Salon Agreements",
                       }),
                     }),
-                   
                   ],
                 }),
               ],
