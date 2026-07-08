@@ -9819,7 +9819,7 @@ function op() {
                   className:
                     "bg-white rounded-3xl shadow-xl overflow-hidden mb-6 transform hover:scale-105 transition-transform",
                   children: a.jsx("img", {
-                    src: "./images/beauty-salon.png",
+                    src: "./images/salons.png",
                     alt: "Search Salons",
                     className: "w-full h-auto max-w-sm",
                   }),
@@ -9848,7 +9848,7 @@ function op() {
                   className:
                     "bg-white rounded-3xl shadow-xl overflow-hidden mb-6 transform hover:scale-105 transition-transform",
                   children: a.jsx("img", {
-                    src: "./images/beauty-salon.png",
+                    src: "./images/time.png",
                     alt: "Select Time",
                     className: "w-full h-auto max-w-sm",
                   }),
@@ -9877,7 +9877,7 @@ function op() {
                   className:
                     "bg-white rounded-3xl shadow-xl overflow-hidden mb-6 transform hover:scale-105 transition-transform",
                   children: a.jsx("img", {
-                    src: "./images/beauty-salon.png",
+                    src: "./images/visit.png",
                     alt: "In Salon",
                     className: "w-full h-auto max-w-sm",
                   }),
