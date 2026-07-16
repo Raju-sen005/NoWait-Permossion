@@ -9784,6 +9784,18 @@ function ip() {
           children:
             "Our mission is to make salon visits convenient, predictable, and enjoyable for everyone. Whether you're a busy professional looking to save time or a salon owner wanting to streamline operations, NoWait is here to transform the way beauty services are booked and delivered.",
         }),
+        a.jsx("div", {
+          className: "mt-16 flex justify-center",
+          children: a.jsx("video", {
+            className: "w-full max-w-4xl rounded-2xl shadow-sm",
+            src: "./videos/salonvdeo.mp4",
+            controls: true,
+            autoPlay: true,
+            muted: true,
+            loop: true,
+            playsInline: true,
+          }),
+        }),
       ],
     }),
   });
@@ -9871,7 +9883,7 @@ function op() {
               ],
             }),
             a.jsxs("div", {
-              className: "flex flex-col items-center",
+              className: "flex flex-col items-center" ,
               children: [
                 a.jsx("div", {
                   className:
@@ -10443,7 +10455,7 @@ function cp() {
                 a.jsx("img", {
                   src: "./images/nowait-logo.png",
                   alt: "NoWait",
-                  className: "h-10 w-10 rounded-full",
+                  className: "h-12 w-12 rounded-full",
                 }),
                 a.jsx("span", {
                   className: "text-2xl font-bold text-gray-900",
