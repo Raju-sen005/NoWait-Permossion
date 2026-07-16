@@ -10001,13 +10001,13 @@ function sp() {
                 className: "bg-gray-50 p-8 rounded-2xl shadow-lg",
                 children: [
                   a.jsx("img", {
-                    src: "./images/qr.png",
+                    src: "./images/qrcode.png",
                     alt: "NoWait QR Code",
                     className: "w-full h-auto rounded-xl",
                   }),
                   a.jsx("p", {
                     className: "text-center text-gray-600 mt-4 font-medium",
-                    children: "Scan the QR code to download the app",
+                    // children: "Scan the QR code to download the app",
                   }),
                 ],
               }),
@@ -10038,239 +10038,239 @@ function up() {
     l = (i) => {
       t({ ...e, [i.target.name]: i.target.value });
     };
-  return a.jsx("section", {
-    id: "contact",
-    className: "py-20 px-4 sm:px-6 lg:px-8 bg-gray-50",
-    children: a.jsxs("div", {
-      className: "max-w-6xl mx-auto",
-      children: [
-        a.jsxs("div", {
-          className: "text-center mb-16",
-          children: [
-            a.jsx("h2", {
-              className: "text-4xl sm:text-5xl font-bold text-gray-900 mb-4",
-              children: "Contact Us",
-            }),
-            a.jsx("p", {
-              className: "text-xl text-gray-600",
-              children: "We'd love to hear from you",
-            }),
-          ],
-        }),
-        a.jsxs("div", {
-          className: "grid grid-cols-1 lg:grid-cols-2 gap-12",
-          children: [
-            a.jsxs("div", {
-              className: "space-y-8",
-              children: [
-                a.jsxs("div", {
-                  className: "flex items-start space-x-4",
-                  children: [
-                    a.jsx("div", {
-                      className:
-                        "w-12 h-12 bg-[#0041F5] bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0",
-                      children: a.jsx(Hf, {
-                        className: "w-6 h-6 text-[#0041F5]",
-                      }),
-                    }),
-                    a.jsxs("div", {
-                      children: [
-                        a.jsx("h3", {
-                          className: "text-xl font-bold text-gray-900 mb-1",
-                          children: "Email",
-                        }),
-                        a.jsx("a", {
-                          href: "mailto:nowaitinsaloon@gmail.com",
-                          className: "text-[#0041F5] hover:underline",
-                          children: "nowaitinsaloon@gmail.com",
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
-                a.jsxs("div", {
-                  className: "flex items-start space-x-4",
-                  children: [
-                    a.jsx("div", {
-                      className:
-                        "w-12 h-12 bg-[#0041F5] bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0",
-                      children: a.jsx(Kf, {
-                        className: "w-6 h-6 text-[#0041F5]",
-                      }),
-                    }),
-                    a.jsxs("div", {
-                      children: [
-                        a.jsx("h3", {
-                          className: "text-xl font-bold text-gray-900 mb-1",
-                          children: "Phone",
-                        }),
-                        a.jsx("a", {
-                          href: "tel:+918529698672",
-                          className: "text-[#0041F5] hover:underline",
-                          children: "+91 85296 98672",
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
-                a.jsxs("div", {
-                  className: "flex items-start space-x-4",
-                  children: [
-                    a.jsx("div", {
-                      className:
-                        "w-12 h-12 bg-[#0041F5] bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0",
-                      children: a.jsx(Oo, {
-                        className: "w-6 h-6 text-[#0041F5]",
-                      }),
-                    }),
-                    a.jsxs("div", {
-                      children: [
-                        a.jsx("h3", {
-                          className: "text-xl font-bold text-gray-900 mb-1",
-                          children: "Location",
-                        }),
-                        a.jsx("p", {
-                          className: "text-gray-600",
-                          children: "Bangalore, India",
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
-                a.jsxs("div", {
-                  children: [
-                    a.jsx("h3", {
-                      className: "text-xl font-bold text-gray-900 mb-4",
-                      children: "Follow Us",
-                    }),
-                    a.jsx("div", {
-                      className: "flex items-center space-x-4",
-                      children: n.map((i) =>
-                        a.jsx(
-                          "a",
-                          {
-                            href: i.url,
-                            target: "_blank",
-                            rel: "noopener noreferrer",
-                            className:
-                              "w-12 h-12 bg-[#0041F5] bg-opacity-10 rounded-lg flex items-center justify-center text-[#0041F5] hover:bg-[#0041F5] hover:text-white transition-all",
-                            "aria-label": i.label,
-                            children: a.jsx(i.icon, { className: "w-6 h-6" }),
-                          },
-                          i.label,
-                        ),
-                      ),
-                    }),
-                  ],
-                }),
-              ],
-            }),
-            a.jsx("div", {
-              children: a.jsxs("form", {
-                onSubmit: r,
-                className: "bg-white p-8 rounded-2xl shadow-lg space-y-6",
-                children: [
-                  a.jsxs("div", {
-                    children: [
-                      a.jsx("label", {
-                        htmlFor: "name",
-                        className:
-                          "block text-sm font-semibold text-gray-700 mb-2",
-                        children: "Name",
-                      }),
-                      a.jsx("input", {
-                        type: "text",
-                        id: "name",
-                        name: "name",
-                        value: e.name,
-                        onChange: l,
-                        required: !0,
-                        className:
-                          "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0041F5] focus:border-transparent outline-none transition-all",
-                        placeholder: "Your name",
-                      }),
-                    ],
-                  }),
-                  a.jsxs("div", {
-                    children: [
-                      a.jsx("label", {
-                        htmlFor: "email",
-                        className:
-                          "block text-sm font-semibold text-gray-700 mb-2",
-                        children: "Email",
-                      }),
-                      a.jsx("input", {
-                        type: "email",
-                        id: "email",
-                        name: "email",
-                        value: e.email,
-                        onChange: l,
-                        required: !0,
-                        className:
-                          "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0041F5] focus:border-transparent outline-none transition-all",
-                        placeholder: "your.email@example.com",
-                      }),
-                    ],
-                  }),
-                  a.jsxs("div", {
-                    children: [
-                      a.jsx("label", {
-                        htmlFor: "subject",
-                        className:
-                          "block text-sm font-semibold text-gray-700 mb-2",
-                        children: "Subject",
-                      }),
-                      a.jsx("input", {
-                        type: "text",
-                        id: "subject",
-                        name: "subject",
-                        value: e.subject,
-                        onChange: l,
-                        required: !0,
-                        className:
-                          "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0041F5] focus:border-transparent outline-none transition-all",
-                        placeholder: "How can we help?",
-                      }),
-                    ],
-                  }),
-                  a.jsxs("div", {
-                    children: [
-                      a.jsx("label", {
-                        htmlFor: "message",
-                        className:
-                          "block text-sm font-semibold text-gray-700 mb-2",
-                        children: "Message",
-                      }),
-                      a.jsx("textarea", {
-                        id: "message",
-                        name: "message",
-                        value: e.message,
-                        onChange: l,
-                        required: !0,
-                        rows: 4,
-                        className:
-                          "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0041F5] focus:border-transparent outline-none transition-all resize-none",
-                        placeholder: "Tell us more...",
-                      }),
-                    ],
-                  }),
-                  a.jsxs("button", {
-                    type: "submit",
-                    className:
-                      "w-full flex items-center justify-center space-x-2 bg-[#0041F5] text-white px-6 py-4 rounded-lg font-semibold hover:bg-[#0035cc] transition-all transform hover:scale-105 shadow-lg",
-                    children: [
-                      a.jsx(Xf, { className: "w-5 h-5" }),
-                      a.jsx("span", { children: "Send Message" }),
-                    ],
-                  }),
-                ],
-              }),
-            }),
-          ],
-        }),
-      ],
-    }),
-  });
+  // return a.jsx("section", {
+  //   id: "contact",
+  //   className: "py-20 px-4 sm:px-6 lg:px-8 bg-gray-50",
+  //   children: a.jsxs("div", {
+  //     className: "max-w-6xl mx-auto",
+  //     children: [
+  //       a.jsxs("div", {
+  //         className: "text-center mb-16",
+  //         children: [
+  //           a.jsx("h2", {
+  //             className: "text-4xl sm:text-5xl font-bold text-gray-900 mb-4",
+  //             children: "Contact Us",
+  //           }),
+  //           a.jsx("p", {
+  //             className: "text-xl text-gray-600",
+  //             children: "We'd love to hear from you",
+  //           }),
+  //         ],
+  //       }),
+  //       a.jsxs("div", {
+  //         className: "grid grid-cols-1 lg:grid-cols-2 gap-12",
+  //         children: [
+  //           a.jsxs("div", {
+  //             className: "space-y-8",
+  //             children: [
+  //               a.jsxs("div", {
+  //                 className: "flex items-start space-x-4",
+  //                 children: [
+  //                   a.jsx("div", {
+  //                     className:
+  //                       "w-12 h-12 bg-[#0041F5] bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0",
+  //                     children: a.jsx(Hf, {
+  //                       className: "w-6 h-6 text-[#0041F5]",
+  //                     }),
+  //                   }),
+  //                   a.jsxs("div", {
+  //                     children: [
+  //                       a.jsx("h3", {
+  //                         className: "text-xl font-bold text-gray-900 mb-1",
+  //                         children: "Email",
+  //                       }),
+  //                       a.jsx("a", {
+  //                         href: "mailto:nowaitinsaloon@gmail.com",
+  //                         className: "text-[#0041F5] hover:underline",
+  //                         children: "nowaitinsaloon@gmail.com",
+  //                       }),
+  //                     ],
+  //                   }),
+  //                 ],
+  //               }),
+  //               a.jsxs("div", {
+  //                 className: "flex items-start space-x-4",
+  //                 children: [
+  //                   a.jsx("div", {
+  //                     className:
+  //                       "w-12 h-12 bg-[#0041F5] bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0",
+  //                     children: a.jsx(Kf, {
+  //                       className: "w-6 h-6 text-[#0041F5]",
+  //                     }),
+  //                   }),
+  //                   a.jsxs("div", {
+  //                     children: [
+  //                       a.jsx("h3", {
+  //                         className: "text-xl font-bold text-gray-900 mb-1",
+  //                         children: "Phone",
+  //                       }),
+  //                       a.jsx("a", {
+  //                         href: "tel:+918529698672",
+  //                         className: "text-[#0041F5] hover:underline",
+  //                         children: "+91 85296 98672",
+  //                       }),
+  //                     ],
+  //                   }),
+  //                 ],
+  //               }),
+  //               a.jsxs("div", {
+  //                 className: "flex items-start space-x-4",
+  //                 children: [
+  //                   a.jsx("div", {
+  //                     className:
+  //                       "w-12 h-12 bg-[#0041F5] bg-opacity-10 rounded-lg flex items-center justify-center flex-shrink-0",
+  //                     children: a.jsx(Oo, {
+  //                       className: "w-6 h-6 text-[#0041F5]",
+  //                     }),
+  //                   }),
+  //                   a.jsxs("div", {
+  //                     children: [
+  //                       a.jsx("h3", {
+  //                         className: "text-xl font-bold text-gray-900 mb-1",
+  //                         children: "Location",
+  //                       }),
+  //                       a.jsx("p", {
+  //                         className: "text-gray-600",
+  //                         children: "Bangalore, India",
+  //                       }),
+  //                     ],
+  //                   }),
+  //                 ],
+  //               }),
+  //               a.jsxs("div", {
+  //                 children: [
+  //                   a.jsx("h3", {
+  //                     className: "text-xl font-bold text-gray-900 mb-4",
+  //                     children: "Follow Us",
+  //                   }),
+  //                   a.jsx("div", {
+  //                     className: "flex items-center space-x-4",
+  //                     children: n.map((i) =>
+  //                       a.jsx(
+  //                         "a",
+  //                         {
+  //                           href: i.url,
+  //                           target: "_blank",
+  //                           rel: "noopener noreferrer",
+  //                           className:
+  //                             "w-12 h-12 bg-[#0041F5] bg-opacity-10 rounded-lg flex items-center justify-center text-[#0041F5] hover:bg-[#0041F5] hover:text-white transition-all",
+  //                           "aria-label": i.label,
+  //                           children: a.jsx(i.icon, { className: "w-6 h-6" }),
+  //                         },
+  //                         i.label,
+  //                       ),
+  //                     ),
+  //                   }),
+  //                 ],
+  //               }),
+  //             ],
+  //           }),
+  //           a.jsx("div", {
+  //             children: a.jsxs("form", {
+  //               onSubmit: r,
+  //               className: "bg-white p-8 rounded-2xl shadow-lg space-y-6",
+  //               children: [
+  //                 a.jsxs("div", {
+  //                   children: [
+  //                     a.jsx("label", {
+  //                       htmlFor: "name",
+  //                       className:
+  //                         "block text-sm font-semibold text-gray-700 mb-2",
+  //                       children: "Name",
+  //                     }),
+  //                     a.jsx("input", {
+  //                       type: "text",
+  //                       id: "name",
+  //                       name: "name",
+  //                       value: e.name,
+  //                       onChange: l,
+  //                       required: !0,
+  //                       className:
+  //                         "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0041F5] focus:border-transparent outline-none transition-all",
+  //                       placeholder: "Your name",
+  //                     }),
+  //                   ],
+  //                 }),
+  //                 a.jsxs("div", {
+  //                   children: [
+  //                     a.jsx("label", {
+  //                       htmlFor: "email",
+  //                       className:
+  //                         "block text-sm font-semibold text-gray-700 mb-2",
+  //                       children: "Email",
+  //                     }),
+  //                     a.jsx("input", {
+  //                       type: "email",
+  //                       id: "email",
+  //                       name: "email",
+  //                       value: e.email,
+  //                       onChange: l,
+  //                       required: !0,
+  //                       className:
+  //                         "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0041F5] focus:border-transparent outline-none transition-all",
+  //                       placeholder: "your.email@example.com",
+  //                     }),
+  //                   ],
+  //                 }),
+  //                 a.jsxs("div", {
+  //                   children: [
+  //                     a.jsx("label", {
+  //                       htmlFor: "subject",
+  //                       className:
+  //                         "block text-sm font-semibold text-gray-700 mb-2",
+  //                       children: "Subject",
+  //                     }),
+  //                     a.jsx("input", {
+  //                       type: "text",
+  //                       id: "subject",
+  //                       name: "subject",
+  //                       value: e.subject,
+  //                       onChange: l,
+  //                       required: !0,
+  //                       className:
+  //                         "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0041F5] focus:border-transparent outline-none transition-all",
+  //                       placeholder: "How can we help?",
+  //                     }),
+  //                   ],
+  //                 }),
+  //                 a.jsxs("div", {
+  //                   children: [
+  //                     a.jsx("label", {
+  //                       htmlFor: "message",
+  //                       className:
+  //                         "block text-sm font-semibold text-gray-700 mb-2",
+  //                       children: "Message",
+  //                     }),
+  //                     a.jsx("textarea", {
+  //                       id: "message",
+  //                       name: "message",
+  //                       value: e.message,
+  //                       onChange: l,
+  //                       required: !0,
+  //                       rows: 4,
+  //                       className:
+  //                         "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0041F5] focus:border-transparent outline-none transition-all resize-none",
+  //                       placeholder: "Tell us more...",
+  //                     }),
+  //                   ],
+  //                 }),
+  //                 a.jsxs("button", {
+  //                   type: "submit",
+  //                   className:
+  //                     "w-full flex items-center justify-center space-x-2 bg-[#0041F5] text-white px-6 py-4 rounded-lg font-semibold hover:bg-[#0035cc] transition-all transform hover:scale-105 shadow-lg",
+  //                   children: [
+  //                     a.jsx(Xf, { className: "w-5 h-5" }),
+  //                     a.jsx("span", { children: "Send Message" }),
+  //                   ],
+  //                 }),
+  //               ],
+  //             }),
+  //           }),
+  //         ],
+  //       }),
+  //     ],
+  //   }),
+  // });
 }
 function ap() {
   const e = new Date().getFullYear(),
@@ -10290,7 +10290,7 @@ function ap() {
       className: "max-w-7xl mx-auto",
       children: [
         a.jsxs("div", {
-          className: "grid grid-cols-1 md:grid-cols-3 gap-8 mb-8",
+          className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8",
           children: [
             a.jsxs("div", {
               children: [
@@ -10422,6 +10422,55 @@ function ap() {
                 }),
               ],
             }),
+            a.jsxs("div", {
+  children: [
+    a.jsx("h3", {
+      className: "text-lg font-bold mb-4",
+      children: "Support",
+    }),
+    a.jsxs("ul", {
+      className: "space-y-2",
+      children: [
+        a.jsx("li", {
+          children: a.jsx("a", {
+            href: "./faq-customer.html",
+            className:
+              "text-gray-400 hover:text-white transition-colors",
+            children: "FAQ for Customers",
+          }),
+        }),
+        a.jsx("li", {
+          children: a.jsx("a", {
+            href: "./faq-partner.html",
+            className:
+              "text-gray-400 hover:text-white transition-colors",
+            children: "FAQ for Partners",
+          }),
+        }),
+        a.jsx("li", {
+          children: a.jsx("a", {
+            href: "./partner.html",
+            className:
+              "inline-flex items-center gap-2 bg-[#0041F5] hover:bg-[#0035cc] text-white px-4 py-2 rounded-lg text-sm font-semibold transition mt-2",
+            children: [
+              "🚀 ",
+              "Partner With Us",
+            ],
+          }),
+        }),
+        a.jsx("li", {
+          children: a.jsx("a", {
+            href: "mailto:nowaitinsaloon@gmail.com",
+            className:
+              "text-gray-400 hover:text-white transition-colors",
+            children: "Contact Support",
+          }),
+        }),
+      ],
+    }),
+  ],
+}),
+
           ],
         }),
         a.jsx("div", {

@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NoWait Partner - List Your Salon & Grow Your Business</title>
+    <meta
+      name="description"
+      content="Partner with NoWait. Register your salon, manage bookings, reduce crowding, and grow your business with India's smart salon booking platform."
+    />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .field-error {
+        border-color: #dc2626 !important;
+      }
+      .error-text {
+        display: none;
+      }
+      .touched.field-error + .error-text,
+      .field-error ~ .error-text {
+        display: block;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-white">
+    <!-- ===== NAV ===== -->
+    <nav class="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center space-x-2">
+            <div
+              class="h-10 w-10 rounded-full bg-[#0041F5] flex items-center justify-center text-white font-bold"
+            >
+              N
+            </div>
+            <span class="text-2xl font-bold text-gray-900">NoWait</span>
+            <span
+              class="hidden sm:inline text-xs font-semibold text-[#0041F5] bg-blue-50 px-2 py-1 rounded-full ml-2"
+              >Partner</span
+            >
+          </div>
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="#benefits" class="text-gray-700 hover:text-[#0041F5] transition-colors">Benefits</a>
+            <a href="#how-it-works" class="text-gray-700 hover:text-[#0041F5] transition-colors">How it Works</a>
+            <a href="#testimonials" class="text-gray-700 hover:text-[#0041F5] transition-colors">Testimonials</a>
+            <a href="#faq" class="text-gray-700 hover:text-[#0041F5] transition-colors">FAQ</a>
+            <a
+              href="#register"
+              class="bg-[#0041F5] text-white px-6 py-2 rounded-lg hover:bg-[#0035cc] transition-colors"
+              >Register Salon</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- ===== HERO ===== -->
+      <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto text-center">
+          <div
+            class="inline-flex items-center bg-blue-50 border border-blue-100 rounded-full px-5 py-2 text-[#0041F5] text-sm font-semibold mb-6"
+          >
+            🎉 0% Platform Fee for First Month
+          </div>
+          <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+            Grow Your Salon Business<br />
+            <span class="text-[#0041F5]">with NoWait</span>
+          </h1>
+          <p class="text-xl sm:text-2xl text-gray-600 mb-10 max-w-3xl mx-auto">
+            Join hundreds of salons managing appointments digitally, reducing waiting time and
+            increasing customer satisfaction.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+            <a
+              href="#register"
+              class="bg-[#0041F5] text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-[#0035cc] transition-all shadow-lg"
+              >Register Your Salon</a
+            >
+            <a
+              href="#benefits"
+              class="border border-gray-300 text-gray-700 px-8 py-4 rounded-lg text-lg font-semibold hover:border-[#0041F5] hover:text-[#0041F5] transition-colors"
+              >Learn More</a
+            >
+          </div>
+          <div class="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
+            <div>
+              <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">500+</h2>
+              <p class="text-gray-600 mt-1">Partner Salons</p>
+            </div>
+            <div>
+              <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">50K+</h2>
+              <p class="text-gray-600 mt-1">Bookings</p>
+            </div>
+            <div>
+              <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">4.9★</h2>
+              <p class="text-gray-600 mt-1">Rating</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== BENEFITS ===== -->
+      <section id="benefits" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Why Join NoWait?</h2>
+            <p class="text-xl text-gray-600">Everything needed to grow your salon business</p>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-xl shadow-md">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">📅 Online Bookings</h3>
+              <p class="text-gray-600">Receive appointments 24×7 without manual coordination</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">⏱ Reduce Waiting</h3>
+              <p class="text-gray-600">Smart queue management keeps your salon running smoothly</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">📈 Business Analytics</h3>
+              <p class="text-gray-600">Track growth, revenue, and customer trends in one place</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">⭐ Customer Reviews</h3>
+              <p class="text-gray-600">Build trust and visibility with verified ratings</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">🔔 Notifications</h3>
+              <p class="text-gray-600">Automatic reminders reduce no-shows and missed slots</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">💳 Secure Payments</h3>
+              <p class="text-gray-600">Simple, secure payment collection at your salon</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== HOW IT WORKS ===== -->
+      <section id="how-it-works" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">How Partnering Works</h2>
+            <p class="text-xl text-gray-600">Get started in three simple steps</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-gray-50 rounded-2xl p-8 shadow-md">
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">Register your salon</h3>
+              <p class="text-gray-600 leading-relaxed">Share your salon details in the form below — it takes less than two minutes</p>
+            </div>
+            <div class="bg-gray-50 rounded-2xl p-8 shadow-md">
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">Get verified</h3>
+              <p class="text-gray-600 leading-relaxed">Our team reviews and verifies your salon, usually within 24 hours</p>
+            </div>
+            <div class="bg-gray-50 rounded-2xl p-8 shadow-md">
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">Start receiving bookings</h3>
+              <p class="text-gray-600 leading-relaxed">Go live on NoWait and let customers book their slot with you</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== REGISTRATION FORM ===== -->
+      <section id="register" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-2xl mx-auto">
+          <div class="text-center mb-10">
+            <h2 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Register Your Salon</h2>
+            <p class="text-xl text-gray-600">Start receiving bookings today</p>
+          </div>
+
+          <div class="bg-white rounded-2xl shadow-lg p-8">
+            <form id="registerForm" novalidate>
+              <div class="mb-5">
+                <label class="block text-sm font-semibold text-gray-700 mb-1">Salon Name</label>
+                <input
+                  id="salonName"
+                  name="salonName"
+                  type="text"
+                  class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[#0041F5]"
+                  placeholder="e.g. Style Studio"
+                />
+                <p class="error-text text-red-600 text-sm mt-1">Please enter your salon name (min 2 characters)</p>
+              </div>
+
+              <div class="mb-5">
+                <label class="block text-sm font-semibold text-gray-700 mb-1">Owner Name</label>
+                <input
+                  id="ownerName"
+                  name="ownerName"
+                  type="text"
+                  class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[#0041F5]"
+                  placeholder="e.g. Rahul Sharma"
+                />
+                <p class="error-text text-red-600 text-sm mt-1">Please enter the owner's name (min 2 characters)</p>
+              </div>
+
+              <div class="mb-5">
+                <label class="block text-sm font-semibold text-gray-700 mb-1">Mobile Number</label>
+                <input
+                  id="mobile"
+                  name="mobile"
+                  type="tel"
+                  maxlength="10"
+                  class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[#0041F5]"
+                  placeholder="10-digit mobile number"
+                />
+                <p class="error-text text-red-600 text-sm mt-1">Please enter a valid Indian mobile number</p>
+              </div>
+
+              <div class="mb-5">
+                <label class="block text-sm font-semibold text-gray-700 mb-1">Email</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[#0041F5]"
+                  placeholder="you@example.com"
+                />
+                <p class="error-text text-red-600 text-sm mt-1">Please enter a valid email address</p>
+              </div>
+
+              <div class="mb-5">
+                <label class="block text-sm font-semibold text-gray-700 mb-1">City</label>
+                <select
+                  id="city"
+                  name="city"
+                  class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[#0041F5]"
+                >
+                  <option value="">Select City</option>
+                  <option>Jaipur</option>
+                  <option>Delhi</option>
+                  <option>Mumbai</option>
+                  <option>Bangalore</option>
+                  <option>Suratgarh</option>
+                  <option>Other</option>
+                </select>
+                <p class="error-text text-red-600 text-sm mt-1">Please select a city</p>
+              </div>
+
+              <div class="mb-8">
+                <label class="block text-sm font-semibold text-gray-700 mb-1">Salon Address</label>
+                <textarea
+                  id="address"
+                  name="address"
+                  rows="4"
+                  class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[#0041F5]"
+                  placeholder="Full salon address"
+                ></textarea>
+                <p class="error-text text-red-600 text-sm mt-1">Please enter a complete address (min 10 characters)</p>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full bg-[#0041F5] text-white rounded-lg py-4 font-semibold text-lg hover:bg-[#0035cc] transition-colors"
+              >
+                Register Now
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== TESTIMONIALS ===== -->
+      <section id="testimonials" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Loved by Salon Owners</h2>
+            <p class="text-xl text-gray-600">Trusted by growing salons across India</p>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div class="bg-gray-50 rounded-xl shadow-md p-8">
+              <div class="text-yellow-400 text-xl mb-4">★★★★★</div>
+              <p class="text-gray-600 leading-relaxed mb-6">
+                Since joining NoWait, our bookings have increased by nearly 40%.
+              </p>
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-full bg-[#0041F5] text-white flex items-center justify-center font-bold">RS</div>
+                <div>
+                  <h4 class="font-bold text-gray-900">Rahul Sharma</h4>
+                  <p class="text-gray-500 text-sm">Style Studio, Jaipur</p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-gray-50 rounded-xl shadow-md p-8">
+              <div class="text-yellow-400 text-xl mb-4">★★★★★</div>
+              <p class="text-gray-600 leading-relaxed mb-6">
+                Waiting time has almost disappeared. Customers love booking online.
+              </p>
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-full bg-[#0041F5] text-white flex items-center justify-center font-bold">PV</div>
+                <div>
+                  <h4 class="font-bold text-gray-900">Priya Verma</h4>
+                  <p class="text-gray-500 text-sm">Beauty Lounge</p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-gray-50 rounded-xl shadow-md p-8">
+              <div class="text-yellow-400 text-xl mb-4">★★★★★</div>
+              <p class="text-gray-600 leading-relaxed mb-6">
+                Excellent dashboard. Managing appointments has become extremely easy.
+              </p>
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-full bg-[#0041F5] text-white flex items-center justify-center font-bold">AJ</div>
+                <div>
+                  <h4 class="font-bold text-gray-900">Amit Joshi</h4>
+                  <p class="text-gray-500 text-sm">The Hair Hub</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== FAQ ===== -->
+      <section id="faq" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+          </div>
+          <div class="space-y-4">
+            <details class="bg-white rounded-xl shadow-md p-6">
+              <summary class="font-semibold cursor-pointer text-lg text-gray-900">Is NoWait free for salon owners?</summary>
+              <p class="mt-4 text-gray-600">Yes. We provide a free trial with no setup fee.</p>
+            </details>
+            <details class="bg-white rounded-xl shadow-md p-6">
+              <summary class="font-semibold cursor-pointer text-lg text-gray-900">How long does verification take?</summary>
+              <p class="mt-4 text-gray-600">Usually within 24 hours.</p>
+            </details>
+            <details class="bg-white rounded-xl shadow-md p-6">
+              <summary class="font-semibold cursor-pointer text-lg text-gray-900">Can I manage multiple branches?</summary>
+              <p class="mt-4 text-gray-600">Yes. Multi-branch support is available.</p>
+            </details>
+            <details class="bg-white rounded-xl shadow-md p-6">
+              <summary class="font-semibold cursor-pointer text-lg text-gray-900">Can customers pay online?</summary>
+              <p class="mt-4 text-gray-600">Yes. Online payment integration is available.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CTA ===== -->
+      <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Ready to Grow Your Salon?</h2>
+          <p class="text-xl text-gray-600 mb-8">Join hundreds of salons already growing with NoWait</p>
+          <a
+            href="#register"
+            class="inline-block bg-[#0041F5] text-white px-10 py-4 rounded-lg text-lg font-semibold hover:bg-[#0035cc] transition-all shadow-lg"
+          >
+            Register Your Salon
+          </a>
+        </div>
+      </section>
+
+      <!-- ===== ADMIN: REGISTERED SALONS ===== -->
+      <section id="admin" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 gap-4">
+            <div>
+              <h2 class="text-2xl font-bold text-gray-900">Registered Salons</h2>
+              <p class="text-gray-600 text-sm">Saved on this device. Export anytime as an Excel file.</p>
+            </div>
+            <button
+              id="exportBtn"
+              class="bg-[#0041F5] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#0035cc] transition-colors whitespace-nowrap"
+            >
+              ⬇ Download Excel
+            </button>
+          </div>
+          <div class="bg-white rounded-xl shadow-md overflow-x-auto">
+            <table class="w-full text-left text-sm">
+              <thead class="bg-gray-100 text-gray-700">
+                <tr>
+                  <th class="p-4">#</th>
+                  <th class="p-4">Salon Name</th>
+                  <th class="p-4">Owner</th>
+                  <th class="p-4">Mobile</th>
+                  <th class="p-4">Email</th>
+                  <th class="p-4">City</th>
+                  <th class="p-4">Registered On</th>
+                </tr>
+              </thead>
+              <tbody id="registrationsBody">
+                <tr>
+                  <td colspan="7" class="p-6 text-center text-gray-400">No salons registered yet</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          <div>
+            <div class="flex items-center space-x-2 mb-4">
+              <div class="h-10 w-10 rounded-full bg-[#0041F5] flex items-center justify-center text-white font-bold">N</div>
+              <span class="text-2xl font-bold">NoWait</span>
+            </div>
+            <p class="text-gray-400">India's smart salon booking platform helping salons reduce waiting time and increase bookings.</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li><a href="#benefits" class="text-gray-400 hover:text-white">Benefits</a></li>
+              <li><a href="#how-it-works" class="text-gray-400 hover:text-white">How it Works</a></li>
+              <li><a href="#register" class="text-gray-400 hover:text-white">Register Salon</a></li>
+              <li><a href="#faq" class="text-gray-400 hover:text-white">FAQ</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-4">Contact</h3>
+            <ul class="space-y-2 text-gray-400">
+              <li>nowaitinsaloon@gmail.com</li>
+              <li>+91 85296 98672</li>
+              <li>Bangalore, India</li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 pt-8 text-center">
+          <p class="text-gray-400">© 2026 NoWait. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===== BACK TO TOP ===== -->
+    <button
+      id="backToTop"
+      class="hidden fixed bottom-6 right-6 w-14 h-14 rounded-full bg-[#0041F5] text-white shadow-xl hover:scale-110 transition z-50"
+    >
+      ↑
+    </button>
+
+    <!-- ===== WHATSAPP FLOATING BUTTON ===== -->
+    <a
+      href="https://wa.me/918529698672"
+      target="_blank"
+      class="fixed bottom-6 left-6 w-14 h-14 rounded-full bg-green-500 flex items-center justify-center shadow-xl hover:scale-110 transition z-50"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" viewBox="0 0 24 24">
+        <path
+          d="M20.52 3.48A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.09.54 4.13 1.57 5.93L0 24l6.34-1.66a11.82 11.82 0 0 0 5.71 1.46h.01c6.55 0 11.89-5.34 11.89-11.89a11.8 11.8 0 0 0-3.43-8.43z"
+        />
+      </svg>
+    </a>
+
+    <!-- ===== SUCCESS MODAL ===== -->
+    <div id="successModal" class="fixed inset-0 hidden bg-black/50 z-[999] flex items-center justify-center p-4">
+      <div class="bg-white rounded-2xl p-10 max-w-md text-center">
+        <div class="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mx-auto text-5xl">✅</div>
+        <h2 class="text-3xl font-bold mt-6 text-gray-900">Registration Submitted</h2>
+        <p class="mt-4 text-gray-500">Thank you for registering. Our team will contact you shortly.</p>
+        <button id="closeModal" class="mt-8 bg-[#0041F5] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#0035cc] transition-colors">
+          Close
+        </button>
+      </div>
+    </div>
+
+    <script>
+      // ---------- Storage helpers ----------
+      const STORAGE_KEY = "nowaitSalonRegistrations";
+
+      function getRegistrations() {
+        try {
+          return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+        } catch (e) {
+          return [];
+        }
+      }
+
+      function saveRegistrations(list) {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
+      }
+
+      function renderTable() {
+        const list = getRegistrations();
+        const body = document.getElementById("registrationsBody");
+        if (!list.length) {
+          body.innerHTML =
+            '<tr><td colspan="7" class="p-6 text-center text-gray-400">No salons registered yet</td></tr>';
+          return;
+        }
+        body.innerHTML = list
+          .map(
+            (r, i) => `
+          <tr class="border-t border-gray-100">
+            <td class="p-4">${i + 1}</td>
+            <td class="p-4">${r.salonName}</td>
+            <td class="p-4">${r.ownerName}</td>
+            <td class="p-4">${r.mobile}</td>
+            <td class="p-4">${r.email}</td>
+            <td class="p-4">${r.city}</td>
+            <td class="p-4">${r.registeredAt}</td>
+          </tr>`
+          )
+          .join("");
+      }
+
+      function exportToExcel() {
+        const list = getRegistrations();
+        if (!list.length) {
+          alert("No registrations to export yet.");
+          return;
+        }
+        const rows = list.map((r) => ({
+          "Salon Name": r.salonName,
+          "Owner Name": r.ownerName,
+          "Mobile Number": r.mobile,
+          Email: r.email,
+          City: r.city,
+          Address: r.address,
+          "Registered On": r.registeredAt,
+        }));
+        const worksheet = XLSX.utils.json_to_sheet(rows);
+        const workbook = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(workbook, worksheet, "Salons");
+        XLSX.writeFile(workbook, "nowait-salon-registrations.xlsx");
+      }
+
+      document.getElementById("exportBtn").addEventListener("click", exportToExcel);
+      renderTable();
+
+      // ---------- Form validation (touched pattern) ----------
+      const form = document.getElementById("registerForm");
+      const fields = {
+        salonName: (v) => v.trim().length >= 2,
+        ownerName: (v) => v.trim().length >= 2,
+        mobile: (v) => /^[6-9]\d{9}$/.test(v.trim()),
+        email: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()),
+        city: (v) => v.trim().length > 0,
+        address: (v) => v.trim().length >= 10,
+      };
+
+      Object.keys(fields).forEach((name) => {
+        const el = document.getElementById(name);
+        el.addEventListener("blur", () => validateField(name, true));
+        el.addEventListener("input", () => {
+          if (el.dataset.touched === "true") validateField(name, true);
+        });
+      });
+
+      function validateField(name, touched) {
+        const el = document.getElementById(name);
+        const isValid = fields[name](el.value);
+        if (touched) el.dataset.touched = "true";
+        if (!isValid && el.dataset.touched === "true") {
+          el.classList.add("field-error");
+        } else {
+          el.classList.remove("field-error");
+        }
+        return isValid;
+      }
+
+      function validateAll() {
+        let allValid = true;
+        Object.keys(fields).forEach((name) => {
+          const valid = validateField(name, true);
+          if (!valid) allValid = false;
+        });
+        return allValid;
+      }
+
+      const modal = document.getElementById("successModal");
+      const close = document.getElementById("closeModal");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        if (!validateAll()) {
+          const firstError = form.querySelector(".field-error");
+          if (firstError) firstError.focus();
+          return;
+        }
+
+        const record = {
+          salonName: document.getElementById("salonName").value.trim(),
+          ownerName: document.getElementById("ownerName").value.trim(),
+          mobile: document.getElementById("mobile").value.trim(),
+          email: document.getElementById("email").value.trim(),
+          city: document.getElementById("city").value.trim(),
+          address: document.getElementById("address").value.trim(),
+          registeredAt: new Date().toLocaleString("en-IN"),
+        };
+
+        const list = getRegistrations();
+        list.push(record);
+        saveRegistrations(list);
+        renderTable();
+
+        modal.classList.remove("hidden");
+        form.reset();
+        Object.keys(fields).forEach((name) => {
+          const el = document.getElementById(name);
+          delete el.dataset.touched;
+          el.classList.remove("field-error");
+        });
+      });
+
+      close.onclick = () => modal.classList.add("hidden");
+      window.addEventListener("click", (e) => {
+        if (e.target === modal) modal.classList.add("hidden");
+      });
+
+      // ---------- Back to top ----------
+      const topBtn = document.getElementById("backToTop");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 500) topBtn.classList.remove("hidden");
+        else topBtn.classList.add("hidden");
+      });
+      topBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
+      // ---------- Smooth anchor scrolling ----------
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) target.scrollIntoView({ behavior: "smooth" });
+        });
+      });
+    </script>
+  </body>
+</html>
