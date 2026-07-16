@@ -10300,7 +10300,7 @@ function ap() {
                     a.jsx("img", {
                       src: "./images/nowait-logo.png",
                       alt: "NoWait",
-                      className: "h-10 w-10 rounded-full",
+                      className: "h-12 w-12 rounded-full",
                     }),
                     a.jsx("span", {
                       className: "text-2xl font-bold",
