@@ -10021,12 +10021,12 @@ function sp() {
 function up() {
   const [e, t] = rt.useState({ name: "", email: "", subject: "", message: "" }),
     n = [
-      { icon: sc, url: "https://facebook.com/nowait", label: "Facebook" },
-      { icon: dc, url: "https://twitter.com/nowait", label: "Twitter" },
-      { icon: uc, url: "https://instagram.com/nowait", label: "Instagram" },
+      { icon: sc, url: "https://facebook.com", label: "Facebook" },
+      { icon: dc, url: "https://twitter.com", label: "Twitter" },
+      { icon: uc, url: "https://instagram.com", label: "Instagram" },
       {
         icon: ac,
-        url: "https://linkedin.com/company/nowait",
+        url: "https://linkedin.com",
         label: "LinkedIn",
       },
     ],
@@ -10275,12 +10275,12 @@ function up() {
 function ap() {
   const e = new Date().getFullYear(),
     t = [
-      { icon: sc, url: "https://facebook.com/nowait", label: "Facebook" },
-      { icon: dc, url: "https://twitter.com/nowait", label: "Twitter" },
-      { icon: uc, url: "https://instagram.com/nowait", label: "Instagram" },
+      { icon: sc, url: "https://facebook.com", label: "Facebook" },
+      { icon: dc, url: "https://twitter.com", label: "Twitter" },
+      { icon: uc, url: "https://instagram.com", label: "Instagram" },
       {
         icon: ac,
-        url: "https://linkedin.com/company/nowait",
+        url: "https://linkedin.com",
         label: "LinkedIn",
       },
     ];
