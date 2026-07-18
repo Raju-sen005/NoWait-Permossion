@@ -88,7 +88,7 @@
           <div
             class="inline-flex items-center bg-blue-50 border border-blue-100 rounded-full px-5 py-2 text-[#0041F5] text-sm font-semibold mb-6"
           >
-          🎁 Free Welcome Gift Hamper for the First 100 Salons
+            🎁 Free Welcome Gift Hamper for the First 100 Salons
           </div>
           <h1
             class="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight"
@@ -552,13 +552,13 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
             <div class="flex items-center space-x-2 mb-4">
-               <img
-                  src="./images/nowait-logo.png"
-                  alt="NoWait logo - salon booking app"
-                  width="40"
-                  height="40"
-                  class="h-12 w-12 rounded-full"
-                /><span class="text-2xl font-bold ">NoWait</span>
+              <img
+                src="./images/nowait-logo.png"
+                alt="NoWait logo - salon booking app"
+                width="40"
+                height="40"
+                class="h-12 w-12 rounded-full"
+              /><span class="text-2xl font-bold">NoWait</span>
             </div>
             <p class="text-gray-400">
               India's smart salon booking platform helping salons reduce waiting
@@ -672,29 +672,29 @@
         localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
       }
 
-      function renderTable() {
-        const list = getRegistrations();
-        const body = document.getElementById("registrationsBody");
-        if (!list.length) {
-          body.innerHTML =
-            '<tr><td colspan="7" class="p-6 text-center text-gray-400">No salons registered yet</td></tr>';
-          return;
-        }
-        body.innerHTML = list
-          .map(
-            (r, i) => `
-          <tr class="border-t border-gray-100">
-            <td class="p-4">${i + 1}</td>
-            <td class="p-4">${r.salonName}</td>
-            <td class="p-4">${r.ownerName}</td>
-            <td class="p-4">${r.mobile}</td>
-            <td class="p-4">${r.email}</td>
-            <td class="p-4">${r.city}</td>
-            <td class="p-4">${r.registeredAt}</td>
-          </tr>`,
-          )
-          .join("");
-      }
+      // function renderTable() {
+      //   const list = getRegistrations();
+      //   const body = document.getElementById("registrationsBody");
+      //   if (!list.length) {
+      //     body.innerHTML =
+      //       '<tr><td colspan="7" class="p-6 text-center text-gray-400">No salons registered yet</td></tr>';
+      //     return;
+      //   }
+      //   body.innerHTML = list
+      //     .map(
+      //       (r, i) => `
+      //     <tr class="border-t border-gray-100">
+      //       <td class="p-4">${i + 1}</td>
+      //       <td class="p-4">${r.salonName}</td>
+      //       <td class="p-4">${r.ownerName}</td>
+      //       <td class="p-4">${r.mobile}</td>
+      //       <td class="p-4">${r.email}</td>
+      //       <td class="p-4">${r.city}</td>
+      //       <td class="p-4">${r.registeredAt}</td>
+      //     </tr>`,
+      //     )
+      //     .join("");
+      // }
 
       function exportToExcel() {
         const list = getRegistrations();
@@ -717,10 +717,10 @@
         XLSX.writeFile(workbook, "nowait-salon-registrations.xlsx");
       }
 
-      document
-        .getElementById("exportBtn")
-        .addEventListener("click", exportToExcel);
-      renderTable();
+      // document
+      //   .getElementById("exportBtn")
+      //   .addEventListener("click", exportToExcel);
+      // renderTable();
 
       // ---------- Form validation (touched pattern) ----------
       const form = document.getElementById("registerForm");
@@ -765,38 +765,88 @@
       const modal = document.getElementById("successModal");
       const close = document.getElementById("closeModal");
 
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
+      // form.addEventListener("submit", function (e) {
+      //   e.preventDefault();
 
-        if (!validateAll()) {
-          const firstError = form.querySelector(".field-error");
-          if (firstError) firstError.focus();
-          return;
-        }
+      //   if (!validateAll()) {
+      //     const firstError = form.querySelector(".field-error");
+      //     if (firstError) firstError.focus();
+      //     return;
+      //   }
 
-        const record = {
-          salonName: document.getElementById("salonName").value.trim(),
-          ownerName: document.getElementById("ownerName").value.trim(),
-          mobile: document.getElementById("mobile").value.trim(),
-          email: document.getElementById("email").value.trim(),
-          city: document.getElementById("city").value.trim(),
-          address: document.getElementById("address").value.trim(),
-          registeredAt: new Date().toLocaleString("en-IN"),
-        };
+      //   const record = {
+      //     salonName: document.getElementById("salonName").value.trim(),
+      //     ownerName: document.getElementById("ownerName").value.trim(),
+      //     mobile: document.getElementById("mobile").value.trim(),
+      //     email: document.getElementById("email").value.trim(),
+      //     city: document.getElementById("city").value.trim(),
+      //     address: document.getElementById("address").value.trim(),
+      //     registeredAt: new Date().toLocaleString("en-IN"),
+      //   };
 
-        const list = getRegistrations();
-        list.push(record);
-        saveRegistrations(list);
-        renderTable();
+      //   const list = getRegistrations();
+      //   list.push(record);
+      //   saveRegistrations(list);
+      //   renderTable();
 
-        modal.classList.remove("hidden");
-        form.reset();
-        Object.keys(fields).forEach((name) => {
-          const el = document.getElementById(name);
-          delete el.dataset.touched;
-          el.classList.remove("field-error");
-        });
-      });
+      //   modal.classList.remove("hidden");
+      //   form.reset();
+      //   Object.keys(fields).forEach((name) => {
+      //     const el = document.getElementById(name);
+      //     delete el.dataset.touched;
+      //     el.classList.remove("field-error");
+      //   });
+      // });
+
+      form.addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  if (!validateAll()) {
+    const firstError = form.querySelector(".field-error");
+    if (firstError) firstError.focus();
+    return;
+  }
+
+  const record = {
+    salonName: document.getElementById("salonName").value.trim(),
+    ownerName: document.getElementById("ownerName").value.trim(),
+    mobile: document.getElementById("mobile").value.trim(),
+    email: document.getElementById("email").value.trim(),
+    city: document.getElementById("city").value.trim(),
+    address: document.getElementById("address").value.trim(),
+  };
+
+  try {
+    const response = await fetch("https://nowait-permossion-backend.onrender.com/api/register-salon", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(record),
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      alert(data.error || "Registration failed");
+      return;
+    }
+
+    modal.classList.remove("hidden");
+
+    form.reset();
+
+    Object.keys(fields).forEach((name) => {
+      const el = document.getElementById(name);
+      delete el.dataset.touched;
+      el.classList.remove("field-error");
+    });
+
+  } catch (err) {
+    console.error(err);
+    alert("Server connection failed");
+  }
+});
 
       close.onclick = () => modal.classList.add("hidden");
       window.addEventListener("click", (e) => {
