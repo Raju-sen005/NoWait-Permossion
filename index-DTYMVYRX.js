@@ -9883,7 +9883,7 @@ function op() {
               ],
             }),
             a.jsxs("div", {
-              className: "flex flex-col items-center" ,
+              className: "flex flex-col items-center",
               children: [
                 a.jsx("div", {
                   className:
@@ -9922,39 +9922,59 @@ function sp() {
     id: "download",
     className: "py-20 px-4 sm:px-6 lg:px-8 bg-white",
     children: a.jsxs("div", {
-      className: "max-w-5xl mx-auto",
+      className: "max-w-6xl mx-auto",
       children: [
         a.jsxs("div", {
-          className: "text-center mb-12",
+          className: "text-center mb-14",
           children: [
             a.jsx("h2", {
               className: "text-4xl sm:text-5xl font-bold text-gray-900 mb-4",
-              children: "Download App",
+              children: "Download Apps",
             }),
             a.jsx("p", {
               className: "text-xl text-gray-600",
-              children: "Get started with NoWait today",
+              children: "Choose the app that fits your needs",
             }),
           ],
         }),
+
         a.jsxs("div", {
-          className: "grid grid-cols-1 md:grid-cols-2 gap-8 items-center",
+          className: "grid grid-cols-1 md:grid-cols-2 gap-10",
+
           children: [
+            // ================= CUSTOMER =================
             a.jsxs("div", {
-              className: "space-y-6",
+              className:
+                "bg-gray-50 rounded-3xl shadow-lg p-8 flex flex-col items-center",
+              style: {
+                margin: "10px",
+              },
+
               children: [
+                a.jsx("h3", {
+                  className: "text-2xl font-bold text-gray-900 mb-2",
+                  children: "Customer App",
+                }),
+
+                a.jsx("p", {
+                  className: "text-gray-500 mb-6 text-center",
+                  children: "Book salons and manage your appointments.",
+                }),
+
                 a.jsxs("a", {
-                  href: "https://play.google.com/store/apps/details?id=com.nowait.owner&hl=en_IN",
+                  href: "https://play.google.com/store/apps/details?id=com.nowait.customer",
                   target: "_blank",
                   rel: "noopener noreferrer",
                   className:
-                    "w-full flex items-center justify-center space-x-4 bg-[#0041F5] text-white px-8 py-5 rounded-xl text-lg font-semibold hover:bg-[#0035cc] transition-all transform hover:scale-105 shadow-lg",
+                    "w-full flex items-center justify-center space-x-4 bg-[#0041F5] text-white px-8 py-0 mb-4 rounded-xl font-semibold hover:bg-[#0035cc] transition-all shadow-lg",
+
                   children: [
                     a.jsx("img", {
                       src: "./images/play.jpg",
+                      className: "w-10",
                       alt: "Google Play",
-                      className: "w-10 h-auto object-contain",
                     }),
+
                     a.jsxs("div", {
                       className: "text-left",
                       children: [
@@ -9970,47 +9990,86 @@ function sp() {
                     }),
                   ],
                 }),
-                // a.jsxs("a", {
-                //   href: "https://apps.apple.com/app/nowait/idXXXXXXXXXX",
-                //   target: "_blank",
-                //   rel: "noopener noreferrer",
-                //   className:
-                //     "w-full flex items-center justify-center space-x-4 bg-[#0041F5] text-white px-8 py-5 rounded-xl text-lg font-semibold hover:bg-[#0035cc] transition-all transform hover:scale-105 shadow-lg",
-                //   children: [
-                //     a.jsx(oc, { className: "w-7 h-7" }),
-                //     a.jsxs("div", {
-                //       className: "text-left",
-                //       children: [
-                //         a.jsx("div", {
-                //           className: "text-xs opacity-80",
-                //           children: "DOWNLOAD ON",
-                //         }),
-                //         a.jsx("div", {
-                //           className: "text-xl font-bold",
-                //           children: "App Store",
-                //         }),
-                //       ],
-                //     }),
-                //   ],
-                // }),
+
+                a.jsx("img", {
+                  src: "./images/customerQR.png",
+                  className: "w-40 mt-8 rounded-xl border",
+                  alt: "Customer QR",
+                  style: {
+                    maxWidth: "50%",
+                  },
+                }),
+
+                a.jsx("p", {
+                  className: "text-center text-gray-600 mt-4 font-medium",
+                  children: "Scan to download the Customer App",
+                }),
               ],
             }),
-            a.jsx("div", {
-              className: "flex justify-center",
-              children: a.jsxs("div", {
-                className: "bg-gray-50 p-8 rounded-2xl shadow-lg",
-                children: [
-                  a.jsx("img", {
-                    src: "./images/qrcode.png",
-                    alt: "NoWait QR Code",
-                    className: "w-full h-auto rounded-xl",
-                  }),
-                  a.jsx("p", {
-                    className: "text-center text-gray-600 mt-4 font-medium",
-                    // children: "Scan the QR code to download the app",
-                  }),
-                ],
-              }),
+
+            // ================= PARTNER =================
+            a.jsxs("div", {
+              className:
+                "bg-gray-50 rounded-3xl shadow-lg p-8 flex flex-col items-center",
+              style: {
+                margin: "10px",
+              },
+
+              children: [
+                a.jsx("h3", {
+                  className: "text-2xl font-bold text-gray-900 mb-2",
+                  children: "Partner App",
+                }),
+
+                a.jsx("p", {
+                  className: "text-gray-500 mb-6 text-center",
+                  children: "Manage bookings and grow your salon.",
+                }),
+
+                a.jsxs("a", {
+                  href: "https://play.google.com/store/apps/details?id=com.nowait.owner&hl=en_IN",
+                  target: "_blank",
+                  rel: "noopener noreferrer",
+                  className:
+                    "w-full flex items-center justify-center space-x-4 bg-[#0041F5] text-white px-8 py-0 mb-4 rounded-xl font-semibold hover:bg-[#0035cc] transition-all shadow-lg",
+
+                  children: [
+                    a.jsx("img", {
+                      src: "./images/play.jpg",
+                      className: "w-10",
+                      alt: "Google Play",
+                    }),
+
+                    a.jsxs("div", {
+                      className: "text-left",
+                      children: [
+                        a.jsx("div", {
+                          className: "text-xs opacity-80",
+                          children: "GET IT ON",
+                        }),
+                        a.jsx("div", {
+                          className: "text-xl font-bold",
+                          children: "Google Play",
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+
+                a.jsx("img", {
+                  src: "./images/partnerQR.png",
+                  className: "w-40 mt-8 rounded-xl border",
+                  style: {
+                    maxWidth: "50%",
+                  },
+                  alt: "Partner QR",
+                }),
+
+                a.jsx("p", {
+                  className: "text-center text-gray-600 mt-4 font-medium",
+                  children: "Scan to download the Partner App",
+                }),
+              ],
             }),
           ],
         }),
@@ -10290,7 +10349,8 @@ function ap() {
       className: "max-w-7xl mx-auto",
       children: [
         a.jsxs("div", {
-          className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8",
+          className:
+            "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8",
           children: [
             a.jsxs("div", {
               children: [
@@ -10423,54 +10483,50 @@ function ap() {
               ],
             }),
             a.jsxs("div", {
-  children: [
-    a.jsx("h3", {
-      className: "text-lg font-bold mb-4",
-      children: "Support",
-    }),
-    a.jsxs("ul", {
-      className: "space-y-2",
-      children: [
-        a.jsx("li", {
-          children: a.jsx("a", {
-            href: "./faq-customer.html",
-            className:
-              "text-gray-400 hover:text-white transition-colors",
-            children: "FAQ for Customers",
-          }),
-        }),
-        a.jsx("li", {
-          children: a.jsx("a", {
-            href: "./faq-partner.html",
-            className:
-              "text-gray-400 hover:text-white transition-colors",
-            children: "FAQ for Partners",
-          }),
-        }),
-        a.jsx("li", {
-          children: a.jsx("a", {
-            href: "./partner.html",
-            className:
-              "inline-flex items-center gap-2 bg-[#0041F5] hover:bg-[#0035cc] text-white px-4 py-2 rounded-lg text-sm font-semibold transition mt-2",
-            children: [
-              "🚀 ",
-              "Partner With Us",
-            ],
-          }),
-        }),
-        a.jsx("li", {
-          children: a.jsx("a", {
-            href: "mailto:nowaitinsaloon@gmail.com",
-            className:
-              "text-gray-400 hover:text-white transition-colors",
-            children: "Contact Support",
-          }),
-        }),
-      ],
-    }),
-  ],
-}),
-
+              children: [
+                a.jsx("h3", {
+                  className: "text-lg font-bold mb-4",
+                  children: "Support",
+                }),
+                a.jsxs("ul", {
+                  className: "space-y-2",
+                  children: [
+                    a.jsx("li", {
+                      children: a.jsx("a", {
+                        href: "./faq-customer.html",
+                        className:
+                          "text-gray-400 hover:text-white transition-colors",
+                        children: "FAQ for Customers",
+                      }),
+                    }),
+                    a.jsx("li", {
+                      children: a.jsx("a", {
+                        href: "./faq-partner.html",
+                        className:
+                          "text-gray-400 hover:text-white transition-colors",
+                        children: "FAQ for Partners",
+                      }),
+                    }),
+                    a.jsx("li", {
+                      children: a.jsx("a", {
+                        href: "./partner.html",
+                        className:
+                          "inline-flex items-center gap-2 bg-[#0041F5] hover:bg-[#0035cc] text-white px-4 py-2 rounded-lg text-sm font-semibold transition mt-2",
+                        children: ["🚀 ", "Partner With Us"],
+                      }),
+                    }),
+                    a.jsx("li", {
+                      children: a.jsx("a", {
+                        href: "mailto:nowaitinsaloon@gmail.com",
+                        className:
+                          "text-gray-400 hover:text-white transition-colors",
+                        children: "Contact Support",
+                      }),
+                    }),
+                  ],
+                }),
+              ],
+            }),
           ],
         }),
         a.jsx("div", {
